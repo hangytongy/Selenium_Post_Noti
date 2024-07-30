@@ -55,7 +55,7 @@ def get_projects(telegram_bot_api,telegram_chat_id):
                 
             elif 'min' in timings[i]:
                 time_ = timings[i]
-                time_ = int(time_[0:time_.index('min')])
+                time_ = int(time_[0:time_.index('min')].split()[1])
                 if time_ < 5:
                     #send notification
                     message = f'{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} : {elements[i]} added in project list, posted {timings[i]} ago'
