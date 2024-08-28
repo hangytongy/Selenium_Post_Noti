@@ -11,23 +11,31 @@ sudo apt install python3 python3-pip -y
 
 ```
 
-2. install selenium and WebDriver Manager
+2. Create a python environment to install dependencies
+```
+cd Selenium_Post_Noti
+
+python3 -m venv env
+soruce env/bin/activate
+```
+
+3. install selenium and WebDriver Manager
 ```
 pip3 install selenium webdriver-manager
 ```
 
-3. install google chrome
+4. install google chrome
 ```
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
-4. install chrome driver
+5. install chrome driver
 ```
 sudo apt install chromium-chromedriver
 ```
 
-5. Add in the following code below for the webdriver, this ensures compatability between the driver and the browser (i think)
+6. Add in the following code below for the webdriver, this ensures compatability between the driver and the browser (i think)
 ```
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -36,18 +44,4 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
 ```
 
-6. All Libraries used
-```
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-from datetime import datetime
-import requests
-import json
-```
+
