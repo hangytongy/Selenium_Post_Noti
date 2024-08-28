@@ -34,6 +34,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
+```
 
 6. All Libraries used
 ```
