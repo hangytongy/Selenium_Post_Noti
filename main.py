@@ -91,7 +91,7 @@ def get_projects(telegram_bot_api,telegram_chat_id):
                 except Exception as e:
                     print(f"error posting message {e}")
                     
-            time.sleep(300)
+        time.sleep(300)
 
 if __name__ == '__main__':   
     
